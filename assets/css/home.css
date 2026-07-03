@@ -59,6 +59,10 @@
   color: #244ea2;
 }
 
+.main-container .hero .hero-buttons .community:hover {
+  background-color: rgb(228, 255, 228);
+}
+
 /* Features Section */
 .feature-section {
   background-color: #ffffff;
@@ -203,6 +207,7 @@
   flex-direction: column;
   padding: 0;
   transition: 0.3s ease;
+  position: relative;
 }
 
 .popular-books .popular-books-container .bookCards-container .card:hover {
@@ -220,6 +225,25 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+.popular-books-container .bookCards-container .card .tag,
+.popular-books-container .bookCards-container .card .tagEx {
+  display: block;
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  background-color: green;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-family: Inter, sans-serif;
+  color: white;
+  font-weight: 500;
+}
+
+.popular-books-container .bookCards-container .card .tagEx {
+  background-color: orange;
 }
 
 .popular-books-container .bookCards-container .card .image-wrapper img {
