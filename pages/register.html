@@ -102,12 +102,8 @@
 
       .input-row {
         display: flex;
+        flex-direction: column;
         gap: 16px;
-      }
-
-      .input-row .input-group {
-        flex: 1;
-        min-width: 0;
       }
 
       .input-group label {
@@ -359,11 +355,6 @@
         .logo-section img {
           height: 64px;
         }
-
-        .input-row {
-          flex-direction: column;
-          gap: 16px;
-        }
       }
     </style>
   </head>
@@ -385,7 +376,7 @@
               <input
                 type="text"
                 id="fullname"
-                placeholder="Enter your name"
+                placeholder="John Doe"
                 required
               />
             </div>
@@ -412,7 +403,7 @@
                 <input
                   type="password"
                   id="password"
-                  placeholder="Create Password"
+                  placeholder="••••••••"
                   required
                 />
                 <span class="toggle-password"
@@ -428,7 +419,7 @@
                 <input
                   type="password"
                   id="confirm-password"
-                  placeholder="Confirm password"
+                  placeholder="••••••••"
                   required
                 />
                 <span class="toggle-password"
