@@ -3,13 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>DHYAN</title>
+
+    <!-- Font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap"
       rel="stylesheet"
@@ -20,11 +24,382 @@
     <link rel="stylesheet" href="../assets/css/components.css" />
 
     <!-- Page CSS -->
-    <!-- Example -->
-    <!-- <link rel="stylesheet" href="../assets/css/home.css" /> -->
+    <style>
+      body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        background-color: #f8fafc;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: #fbfbfe;
+      }
+
+      .login {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 24px;
+        box-sizing: border-box;
+      }
+
+      .login-card {
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 8px;
+        width: 100%;
+        max-width: 440px;
+        box-shadow: 0 4px 12px rgba(17, 28, 45, 0.05);
+        box-sizing: border-box;
+      }
+
+      .logo-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 24px;
+      }
+
+      .logo-section img {
+        height: 72px;
+        width: auto;
+        object-fit: contain;
+        margin-bottom: 12px;
+      }
+
+      .logo-section h1 {
+        font-family: "Merriweather", serif;
+        font-weight: 700;
+        font-size: 24px;
+        color: #111c2d;
+        margin: 0 0 8px 0;
+      }
+
+      .logo-section p {
+        font-size: 14px;
+        color: #64748b;
+        margin: 0;
+      }
+
+      .login-form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .input-group label {
+        font-size: 13px;
+        font-weight: 500;
+        color: #434652;
+      }
+
+      .label-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .label-row a {
+        color: #244ea2;
+        font-weight: 500;
+        font-size: 12px;
+        text-decoration: none;
+      }
+
+      .label-row a:hover {
+        text-decoration: underline;
+      }
+
+      .input-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      .input-wrapper input {
+        width: 100%;
+        padding: 12px 40px;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+        background-color: #f8fafc;
+        font-size: 14px;
+        color: #111c2d;
+        outline: none;
+        transition: border-color 0.2s ease;
+      }
+
+      .input-wrapper input:focus {
+        border-color: #1d4ed8;
+        background-color: #ffffff;
+      }
+
+      .input-wrapper .icon {
+        position: absolute;
+        left: 14px;
+        color: #94a3b8;
+        pointer-events: none;
+      }
+
+      .input-wrapper .toggle-password {
+        position: absolute;
+        right: 14px;
+        cursor: pointer;
+        color: #94a3b8;
+        padding: 4px;
+      }
+
+      .input-wrapper .toggle-password:hover {
+        color: #64748b;
+      }
+
+      .checkbox-group {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 4px 0;
+      }
+
+      .checkbox-group input[type="checkbox"] {
+        cursor: pointer;
+        width: 16px;
+        height: 16px;
+      }
+
+      .checkbox-group label {
+        font-size: 13px;
+        color: #4a4a4a;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .btn-action {
+        width: 100%;
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        box-sizing: border-box;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      .btn-primary {
+        background-color: #1d4ed8;
+        color: #ffffff;
+        border: none;
+      }
+
+      .btn-primary:hover {
+        background-color: #1e40af;
+      }
+
+      .btn-google {
+        background-color: #ffffff;
+        border: 1px solid #e2e8f0;
+        color: #111c2d;
+      }
+
+      .btn-google:hover {
+        background-color: #f8fafc;
+        border-color: #cbd5e1;
+      }
+
+      .btn-google img {
+        width: 18px;
+        height: 18px;
+      }
+
+      .btn-secondary {
+        background-color: #ffffff;
+        border: 1px solid #1d4ed8;
+        color: #1d4ed8;
+      }
+
+      .btn-secondary:hover {
+        background-color: #eff6ff;
+      }
+
+      .divider {
+        text-align: center;
+        position: relative;
+        margin: 24px 0;
+      }
+
+      .divider::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: #e2e8f0;
+        z-index: 1;
+      }
+
+      .divider span {
+        background: #ffffff;
+        padding: 0 12px;
+        font-size: 11px;
+        font-weight: 600;
+        color: #94a3b8;
+        position: relative;
+        z-index: 2;
+        letter-spacing: 0.5px;
+      }
+
+      .login {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 24px;
+        box-sizing: border-box;
+        gap: 24px;
+        background-color: #fbfbfe;
+      }
+
+      .login-footer {
+        text-align: center;
+        width: 100%;
+        max-width: 440px;
+        font-family: "Inter", sans-serif;
+      }
+
+      .login-footer p {
+        font-size: 11px;
+        color: #94a3b8;
+        margin: 0 0 12px 0;
+        letter-spacing: 0.2px;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+      }
+
+      .footer-links a {
+        font-size: 12px;
+        font-weight: 500;
+        color: #4b5563;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .footer-links a:hover {
+        color: #1d4ed8;
+        text-decoration: underline;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 480px) {
+        .login {
+          padding: 12px;
+        }
+
+        .login-card {
+          padding: 32px 20px;
+          border-radius: 12px;
+          box-shadow: none;
+        }
+
+        .logo-section h1 {
+          font-size: 22px;
+        }
+
+        .logo-section img {
+          height: 64px;
+        }
+      }
+    </style>
   </head>
 
-  <body></body>
+  <body>
+    <main class="login">
+      <div class="login-card">
+        <div class="logo-section">
+          <img src="../assets/icons/logo.png" alt="Dhyan Logo" />
+          <h1>Welcome Back</h1>
+          <p>Enter your credentials to access your library.</p>
+        </div>
 
-  <script src="../assets/js/main.js"></script>
+        <form class="login-form">
+          <div class="input-group">
+            <label for="email">Email Address</label>
+            <div class="input-wrapper">
+              <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+              <input
+                type="email"
+                id="email"
+                placeholder="name@example.com"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <div class="label-row">
+              <label for="password">Password</label>
+              <a href="#" class="forgot-link">Forgot Password?</a>
+            </div>
+            <div class="input-wrapper">
+              <span class="icon"><i class="fa-solid fa-lock"></i></span>
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                required
+              />
+              <span class="toggle-password"
+                ><i class="fa-solid fa-eye"></i
+              ></span>
+            </div>
+          </div>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="remember" />
+            <label for="remember">Remember this device</label>
+          </div>
+
+          <button type="submit" class="btn-action btn-primary">
+            Sign In <i class="fa-solid fa-arrow-right-to-bracket"></i>
+          </button>
+        </form>
+
+        <div class="divider"><span>OR</span></div>
+
+        <button type="button" class="btn-action btn-google">
+          <img src="../assets/icons/google.png" alt="Google Icon" />
+          Continue with Google
+        </button>
+
+        <div class="divider"><span>NEW TO DHYAN?</span></div>
+
+        <a href="#" class="btn-action btn-secondary">Create an account</a>
+      </div>
+    </main>
+    <footer class="login-footer">
+      <p>&copy; 2024 Dhyan, Shared Knowledge, Growing Together.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Support</a>
+      </div>
+    </footer>
+  </body>
 </html>
