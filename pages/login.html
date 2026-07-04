@@ -37,23 +37,45 @@
         background-color: #fbfbfe;
       }
 
+      @keyframes cardEnter {
+        from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.001ms !important;
+          transition-duration: 0.001ms !important;
+        }
+      }
+
       .login {
         min-height: 100vh;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 24px;
         box-sizing: border-box;
+        gap: 24px;
+        background-color: #fbfbfe;
       }
 
       .login-card {
         background-color: #ffffff;
-        padding: 40px;
+        padding: 48px;
         border-radius: 8px;
         width: 100%;
-        max-width: 440px;
+        max-width: 520px;
         box-shadow: 0 4px 12px rgba(17, 28, 45, 0.05);
         box-sizing: border-box;
+        animation: cardEnter 0.45s ease-out;
       }
 
       .logo-section {
@@ -114,9 +136,11 @@
         font-weight: 500;
         font-size: 12px;
         text-decoration: none;
+        transition: color 0.2s ease;
       }
 
       .label-row a:hover {
+        color: #1d4ed8;
         text-decoration: underline;
       }
 
@@ -135,12 +159,17 @@
         font-size: 14px;
         color: #111c2d;
         outline: none;
-        transition: border-color 0.2s ease;
+        transition:
+          border-color 0.2s ease,
+          box-shadow 0.2s ease,
+          background-color 0.2s ease;
+        box-sizing: border-box;
       }
 
       .input-wrapper input:focus {
         border-color: #1d4ed8;
         background-color: #ffffff;
+        box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.12);
       }
 
       .input-wrapper .icon {
@@ -148,6 +177,11 @@
         left: 14px;
         color: #94a3b8;
         pointer-events: none;
+        transition: color 0.2s ease;
+      }
+
+      .input-wrapper input:focus ~ .icon {
+        color: #1d4ed8;
       }
 
       .input-wrapper .toggle-password {
@@ -156,10 +190,17 @@
         cursor: pointer;
         color: #94a3b8;
         padding: 4px;
+        transition:
+          color 0.2s ease,
+          transform 0.15s ease;
       }
 
       .input-wrapper .toggle-password:hover {
         color: #64748b;
+      }
+
+      .input-wrapper .toggle-password:active {
+        transform: scale(0.88);
       }
 
       .checkbox-group {
@@ -173,6 +214,12 @@
         cursor: pointer;
         width: 16px;
         height: 16px;
+        accent-color: #1d4ed8;
+        transition: transform 0.15s ease;
+      }
+
+      .checkbox-group input[type="checkbox"]:active {
+        transform: scale(0.9);
       }
 
       .checkbox-group label {
@@ -195,7 +242,11 @@
         gap: 8px;
         box-sizing: border-box;
         text-decoration: none;
-        transition: all 0.2s ease;
+        transition:
+          background-color 0.2s ease,
+          border-color 0.2s ease,
+          transform 0.15s ease,
+          box-shadow 0.2s ease;
       }
 
       .btn-primary {
@@ -206,6 +257,21 @@
 
       .btn-primary:hover {
         background-color: #1e40af;
+        transform: translateY(-1px);
+        box-shadow: 0 6px 14px rgba(29, 78, 216, 0.25);
+      }
+
+      .btn-primary:active {
+        transform: translateY(0);
+        box-shadow: none;
+      }
+
+      .btn-primary i {
+        transition: transform 0.2s ease;
+      }
+
+      .btn-primary:hover i {
+        transform: translateX(3px);
       }
 
       .btn-google {
@@ -217,6 +283,11 @@
       .btn-google:hover {
         background-color: #f8fafc;
         border-color: #cbd5e1;
+        transform: translateY(-1px);
+      }
+
+      .btn-google:active {
+        transform: translateY(0);
       }
 
       .btn-google img {
@@ -232,6 +303,11 @@
 
       .btn-secondary:hover {
         background-color: #eff6ff;
+        transform: translateY(-1px);
+      }
+
+      .btn-secondary:active {
+        transform: translateY(0);
       }
 
       .divider {
@@ -262,22 +338,10 @@
         letter-spacing: 0.5px;
       }
 
-      .login {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 24px;
-        box-sizing: border-box;
-        gap: 24px;
-        background-color: #fbfbfe;
-      }
-
       .login-footer {
         text-align: center;
         width: 100%;
-        max-width: 440px;
+        max-width: 520px;
         font-family: "Inter", sans-serif;
       }
 
@@ -343,13 +407,13 @@
           <div class="input-group">
             <label for="email">Email Address</label>
             <div class="input-wrapper">
-              <span class="icon"><i class="fa-solid fa-envelope"></i></span>
               <input
                 type="email"
                 id="email"
                 placeholder="name@example.com"
                 required
               />
+              <span class="icon"><i class="fa-solid fa-envelope"></i></span>
             </div>
           </div>
 
@@ -359,13 +423,13 @@
               <a href="#" class="forgot-link">Forgot Password?</a>
             </div>
             <div class="input-wrapper">
-              <span class="icon"><i class="fa-solid fa-lock"></i></span>
               <input
                 type="password"
                 id="password"
                 placeholder="Enter your password"
                 required
               />
+              <span class="icon"><i class="fa-solid fa-lock"></i></span>
               <span class="toggle-password"
                 ><i class="fa-solid fa-eye"></i
               ></span>
@@ -391,7 +455,9 @@
 
         <div class="divider"><span>NEW TO DHYAN?</span></div>
 
-        <a href="#" class="btn-action btn-secondary">Create an account</a>
+        <a href="register.html" class="btn-action btn-secondary"
+          >Create an account</a
+        >
       </div>
     </main>
     <footer class="login-footer">
@@ -401,5 +467,18 @@
         <a href="#">Support</a>
       </div>
     </footer>
+
+    <script>
+      document.querySelectorAll(".toggle-password").forEach((toggle) => {
+        toggle.addEventListener("click", () => {
+          const input = toggle.closest(".input-wrapper").querySelector("input");
+          const icon = toggle.querySelector("i");
+          const isPassword = input.type === "password";
+          input.type = isPassword ? "text" : "password";
+          icon.classList.toggle("fa-eye");
+          icon.classList.toggle("fa-eye-slash");
+        });
+      });
+    </script>
   </body>
 </html>
