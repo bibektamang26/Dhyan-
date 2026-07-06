@@ -330,8 +330,16 @@ a {
 }
 
 .sidebar .nav-item.active {
-  background: #1d4ed8;
+  background: #244ea2;
   color: #ffffff;
+}
+
+.sidebar:has(.nav-item:hover) .nav-item.active:not(:hover) {
+  background: transparent;
+  color: #374151;
+}
+.sidebar:has(.nav-item:hover) .nav-item.active:not(:hover) i {
+  color: #9ca3af;
 }
 
 .sidebar .nav-item.active i {
