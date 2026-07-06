@@ -366,3 +366,12 @@ a {
   font-size: 14px;
   padding: 10px 12px;
 }
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    z-index: 1000;
+    width: 240px;
+  }
+}
