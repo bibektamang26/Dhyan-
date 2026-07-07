@@ -130,10 +130,13 @@ a {
   scale: calc(1.1);
 }
 
+#notification {
+  position: relative;
+}
 .navbar .container .nav-actions .notification-number {
   position: absolute;
   right: 32px;
-  bottom: 14px;
+  bottom: 13px;
   background: red;
   border-radius: 50%;
   height: 14px;
@@ -374,5 +377,6 @@ a {
     transition: transform 0.25s ease;
     z-index: 1000;
     width: 240px;
+    display: none;
   }
 }
