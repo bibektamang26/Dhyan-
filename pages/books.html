@@ -21,12 +21,212 @@
     <!-- Global CSS -->
     <link rel="stylesheet" href="../assets/css/variables.css" />
     <link rel="stylesheet" href="../assets/css/components.css" />
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../assets/css/books.css" />
   </head>
 
   <body>
-    <div id="sidebar"></div>
+    <div class="bookspage-layout">
+      <div id="sidebar"></div>
 
-    <main></main>
+      <main>
+        <header class="topbar">
+          <div class="search-wrapper">
+            <div class="search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input
+                type="text"
+                placeholder="Search for books, authors, or ISBN..."
+              />
+            </div>
+          </div>
+          <div class="topbar-actions">
+            <button class="icon-btn" id="notification">
+              <span class="notification-number">1</span
+              ><i class="fa-regular fa-bell"></i>
+            </button>
+            <button class="icon-btn">
+              <i class="fa-regular fa-circle-user"></i>
+            </button>
+          </div>
+        </header>
+
+        <div class="page">
+          <div class="page-header">
+            <div class="header-info">
+              <h2 class="page-title">Explore Library</h2>
+              <p class="page-subtitle">
+                Discover books shared by your local community.
+              </p>
+            </div>
+            <button class="btn-primary">
+              <i class="fa-solid fa-plus"></i> Add a Book
+            </button>
+          </div>
+
+          <div class="filter-bar">
+            <div class="filter-group">
+              <button class="filter-dropdown">
+                All Categories <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <button class="filter-dropdown">
+                Availability <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <button class="filter-dropdown">
+                Distance <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+            <button class="more-filters">
+              <i class="fa-solid fa-sliders"></i> More Filters
+            </button>
+          </div>
+
+          <div class="book-grid">
+            <div class="book-card">
+              <div class="book-cover">
+                <div class="image-wrapper">
+                  <img src="../assets/images/book1.png" alt="Atomic Habits" />
+                </div>
+                <button class="bookmark-btn">
+                  <i class="fa-regular fa-bookmark"></i>
+                </button>
+                <span class="status-badge available">Available</span>
+              </div>
+              <div class="book-info">
+                <span class="book-category">Self-Help</span>
+                <h3 class="book-title">Atomic Habits</h3>
+                <p class="book-author">James Clear</p>
+                <div class="book-meta">
+                  <span class="book-distance"
+                    ><i class="fa-solid fa-location-dot"></i> KTM</span
+                  >
+                  <a href="#" class="action request">Request</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="book-card">
+              <div class="book-cover">
+                <div class="image-wrapper">
+                  <img src="../assets/images/book2.png" alt="सेतो धरती" />
+                </div>
+                <button class="bookmark-btn">
+                  <i class="fa-regular fa-bookmark"></i>
+                </button>
+                <span class="status-badge available">Available</span>
+              </div>
+              <div class="book-info">
+                <span class="book-category">Social Realism Fiction</span>
+                <h3 class="book-title">सेतो धरती</h3>
+                <p class="book-author">अमर न्यौपाने</p>
+                <div class="book-meta">
+                  <span class="book-distance"
+                    ><i class="fa-solid fa-location-dot"></i> BKT</span
+                  >
+                  <a href="#" class="action request">Request</a>
+                </div>
+              </div>
+            </div>
+            <div class="book-card">
+              <div class="book-cover">
+                <div class="image-wrapper">
+                  <img
+                    src="../assets/images/book3.png"
+                    alt="अन्तरमनको यात्रा"
+                  />
+                </div>
+                <button class="bookmark-btn">
+                  <i class="fa-regular fa-bookmark"></i>
+                </button>
+                <span class="status-badge exchanged">Exchanged</span>
+              </div>
+              <div class="book-info">
+                <span class="book-category">Memoir</span>
+                <h3 class="book-title">अन्तरमनको यात्रा</h3>
+                <p class="book-author">Jagadish Ghimire</p>
+                <div class="book-meta">
+                  <span class="book-return"
+                    ><i class="fa-regular fa-calendar"></i> July 26</span
+                  >
+                  <a href="#" class="action notitfy">Notify Me</a>
+                </div>
+              </div>
+            </div>
+            <div class="book-card">
+              <div class="book-cover">
+                <div class="image-wrapper">
+                  <img src="../assets/images/book4.png" alt="कर्नाली ब्लुज" />
+                </div>
+                <button class="bookmark-btn">
+                  <i class="fa-regular fa-bookmark"></i>
+                </button>
+                <span class="status-badge available">Available</span>
+              </div>
+              <div class="book-info">
+                <span class="book-category">Coming-of-Age Drama</span>
+                <h3 class="book-title">कर्नाली ब्लुज</h3>
+                <p class="book-author">बुद्धिसागर</p>
+                <div class="book-meta">
+                  <span class="book-distance"
+                    ><i class="fa-solid fa-location-dot"></i> PKH</span
+                  >
+                  <a href="#" class="action request">Request</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="book-card">
+              <div class="book-cover">
+                <div class="image-wrapper">
+                  <img src="../assets/images/book5.png" alt="Dune" />
+                </div>
+                <button class="bookmark-btn">
+                  <i class="fa-regular fa-bookmark"></i>
+                </button>
+                <span class="status-badge exchanged">Exchanged</span>
+              </div>
+              <div class="book-info">
+                <span class="book-category">Science Fiction</span>
+                <h3 class="book-title">Dune</h3>
+                <p class="book-author">Frank Herbert</p>
+                <div class="book-meta">
+                  <span class="book-return"
+                    ><i class="fa-regular fa-calendar"></i> Oct 12</span
+                  >
+                  <a href="#" class="action notify">Notify Me</a>
+                </div>
+              </div>
+            </div>
+            <div class="book-card">
+              <div class="book-cover">
+                <div class="image-wrapper">
+                  <img
+                    src="../assets/images/book6.png"
+                    alt="Think And Grow Rich"
+                  />
+                </div>
+                <button class="bookmark-btn">
+                  <i class="fa-regular fa-bookmark"></i>
+                </button>
+                <span class="status-badge available">Available</span>
+              </div>
+              <div class="book-info">
+                <span class="book-category">Self-Help</span>
+                <h3 class="book-title">Think And Grow Rich</h3>
+                <p class="book-author">Napolean Hill</p>
+                <div class="book-meta">
+                  <span class="book-distance"
+                    ><i class="fa-solid fa-location-dot"></i> Nwkt</span
+                  >
+                  <a href="#" class="action request">Request</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
 
     <script src="../assets/js/main.js"></script>
   </body>
