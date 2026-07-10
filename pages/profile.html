@@ -22,13 +22,134 @@
     <!-- Global CSS -->
     <link rel="stylesheet" href="../assets/css/variables.css" />
     <link rel="stylesheet" href="../assets/css/components.css" />
+
+    <!-- page css -->
+    <link rel="stylesheet" href="../assets/css/profile.css" />
   </head>
 
   <body>
-    <div class="dashboard-layout">
+    <div class="layout">
       <div id="sidebar"></div>
 
-      <main></main>
+      <main>
+        <!-- Profile info -->
+        <div class="profile-page">
+          <div class="profile-heading">
+            <div class="profile-image">
+              <div class="image-wrapper">
+                <img src="../assets/images/profile.jpeg" alt="profile.jpeg" />
+              </div>
+              <div class="info">
+                <h1>Bibek</h1>
+                <p>Avid reader and philosophy enthusiast</p>
+              </div>
+            </div>
+            <button class="edit-profile">
+              <i class="fa-solid fa-pencil"></i> Edit Profile
+            </button>
+          </div>
+
+          <!-- Achievements -->
+          <div class="middle-section">
+            <div class="left-stats">
+              <div class="stat-row">
+                <div class="card stat-card">
+                  <span class="stat-number number-blue">24</span>
+                  <span class="stat-label">Books Shared</span>
+                </div>
+                <div class="card stat-card">
+                  <span class="stat-number number-green">18</span>
+                  <span class="stat-label">Exchanges Completed</span>
+                </div>
+              </div>
+              <div class="card ranking-card">
+                <div>
+                  <div class="ranking-title">Community Ranking</div>
+                  <div class="ranking-subtitle">
+                    Top 5% of Knowledge Sharers
+                  </div>
+                </div>
+                <div class="ranking-icon">
+                  <i class="fa-solid fa-medal"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="card interests-card">
+              <div class="interests-title">Interests</div>
+              <div class="tags-container">
+                <span class="tag">Existentialism</span>
+                <span class="tag">Classical Music</span>
+                <span class="tag">Ancient Greek Philosophy</span>
+                <span class="tag">Architecture</span>
+                <span class="tag">Modern Poetry</span>
+                <span class="tag">World History</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="books-section">
+            <div class="books-header">
+              <h2>My Books</h2>
+              <button class="filter-btn">
+                <span class="filter-icon">≡</span> Filter
+              </button>
+            </div>
+
+            <div class="books-grid">
+              <div class="book-item">
+                <div class="book-cover cover-republic">
+                  <div class="cover-text-wrapper">
+                    <div class="cover-mini-title">THE REPUBLIC</div>
+                    <div class="cover-main-title">THE REPUBLIC</div>
+                    <div class="cover-author">BY PLATO</div>
+                  </div>
+                </div>
+                <div class="book-title">The Republic</div>
+                <div class="book-author">Plato</div>
+                <span class="badge badge-available">AVAILABLE</span>
+              </div>
+
+              <div class="book-item">
+                <div class="book-cover cover-thus-spoke">
+                  <div class="abstract-mountain"></div>
+                </div>
+                <div class="book-title">Thus Spoke Zarathustra</div>
+                <div class="book-author">F. Nietzsche</div>
+                <span class="badge badge-lent">LENT OUT</span>
+              </div>
+
+              <div class="book-item">
+                <div class="book-cover cover-meditations">
+                  <div class="wreath-icon">📋</div>
+                </div>
+                <div class="book-title">Meditations</div>
+                <div class="book-author">Marcus Aurelius</div>
+                <span class="badge badge-available">AVAILABLE</span>
+              </div>
+
+              <div class="book-item">
+                <div class="book-cover cover-being-time">
+                  <div class="cover-text-wrapper">
+                    <div class="cover-main-title">"Being and Time"</div>
+                    <div class="cover-author">by MARTIN HEIDEGGER</div>
+                  </div>
+                </div>
+                <div class="book-title">Being and Time</div>
+                <div class="book-author">M. Heidegger</div>
+                <span class="badge badge-available">AVAILABLE</span>
+              </div>
+
+              <div class="book-item">
+                <div class="add-book-card">
+                  <div class="add-icon">+</div>
+                  <div class="add-text">Add Book</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
     <script src="../assets/js/main.js"></script>
   </body>
