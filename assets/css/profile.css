@@ -1,0 +1,102 @@
+.layout {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.layout main {
+  flex: 1;
+  min-width: 0;
+}
+
+.layout main .profile-page {
+  padding: 48px;
+}
+
+.layout main .profile-page .profile-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom, #e8ecfd 0%, #f8faff 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  margin-bottom: 64px;
+}
+
+.layout main .profile-page .profile-heading .profile-image {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+}
+
+.layout main .profile-page .profile-heading .profile-image .image-wrapper {
+  border: 4px solid #2443a2;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  padding: 0;
+}
+
+.layout main .profile-page .profile-heading .profile-image .image-wrapper img {
+  height: 120px;
+  width: 120px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.layout main .profile-page .profile-heading .profile-image .info h1 {
+  color: #111c2d;
+  font-size: 32px;
+  font-family: Merriweather;
+}
+
+.layout main .profile-page .profile-heading .profile-image .info p {
+  margin-bottom: 8px;
+  color: #434652;
+  font-size: 16px;
+  font-family: Inter;
+}
+
+.layout main .profile-page .profile-heading .edit-profile {
+  color: white;
+  background-color: #2443a2;
+  padding: 10px;
+  font-size: 14px;
+  margin-right: 60px;
+  border-radius: 8px;
+  border: none;
+}
+
+.layout main .middle-section {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.layout main .middle-section .left-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.layout main .middle-section .left-stats .stat-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.layout main .middle-section .left-stats .stat-row .stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 52px 32px;
+  text-align: center;
+  border: 1px solid #f0f4f8;
+}
