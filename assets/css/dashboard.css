@@ -209,7 +209,7 @@ main {
 }
 
 .book-card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
   box-shadow: 0 0 20px 4px rgba(14, 165, 233, 0.35);
 }
 
@@ -302,7 +302,7 @@ main {
 }
 
 .activity-item:hover {
-  transform: translateX(-2px);
+  transform: translateX(-1px);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
@@ -355,6 +355,7 @@ main {
   border-radius: 4px;
   cursor: pointer;
   border: 1px solid transparent;
+  transition: all 0.3s ease;
 }
 
 .btn-accept {
@@ -362,10 +363,17 @@ main {
   color: white;
 }
 
+.btn-accept:hover {
+  background-color: #13b33b;
+}
+
 .btn-decline {
   background-color: #fff;
   color: #111c2d;
   border-color: #d1d5db;
+}
+.btn-decline:hover {
+  background-color: #f0f3ff;
 }
 
 .btn-start-discussion {
