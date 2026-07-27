@@ -22,13 +22,238 @@
     <!-- Global CSS -->
     <link rel="stylesheet" href="../assets/css/variables.css" />
     <link rel="stylesheet" href="../assets/css/components.css" />
+
+    <!-- page css -->
+    <link rel="stylesheet" href="../assets/css/community.css" />
   </head>
 
   <body>
-    <div class="dashboard-layout">
+    <div class="layout">
       <div id="sidebar"></div>
 
-      <main></main>
+      <main>
+        <div class="community-feed">
+          <div class="feed-main">
+            <header class="feed-header">
+              <div class="feed-header-text">
+                <h1>Community Feed</h1>
+                <p>
+                  Discuss books, share insights, and connect with fellow
+                  readers.
+                </p>
+              </div>
+              <button class="btn-new-post">
+                <i class="fa-solid fa-pen"></i> New Post
+              </button>
+            </header>
+
+            <div class="new-post-box">
+              <a href="../pages/profile.html"
+                ><img
+                  src="../assets/images/profile5.png"
+                  alt="Your avatar"
+                  class="avatar"
+              /></a>
+              <div class="new-post-input">
+                <textarea
+                  type="text"
+                  placeholder="What are you reading right now? Share your thoughts..."
+                ></textarea>
+                <div class="new-post-actions">
+                  <div class="new-post-icons">
+                    <button class="icon-btn">
+                      <i class="fa-regular fa-image"></i>
+                    </button>
+                    <button class="icon-btn">
+                      <i class="fa-solid fa-book-open"></i>
+                    </button>
+                  </div>
+                  <button class="btn-post">Post</button>
+                </div>
+              </div>
+            </div>
+
+            <article class="post-card">
+              <div class="post-header">
+                <img
+                  src="../assets/images/profileM.jpeg"
+                  alt="Tom Bhai"
+                  class="avatar"
+                />
+                <div class="post-author-info">
+                  <h4>Tom Bhai</h4>
+                  <p>2 hours ago &middot; Professor of Literature</p>
+                </div>
+                <button class="btn-more">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </button>
+              </div>
+
+              <h3 class="post-title">
+                Re-evaluating 'The Brothers Karamazov' in the Modern Era
+              </h3>
+              <p class="post-text">
+                I recently picked up Dostoevsky's masterpiece again after nearly
+                a decade. It's fascinating how the Grand Inquisitor chapter
+                feels even more relevant today amidst our ongoing debates about
+                freedom versus security. The translation by Pevear and
+                Volokhonsky really brings out the nuances that older versions
+                missed. Has anyone else reread a classic recently and found
+                their perspective completely shifted?
+              </p>
+
+              <div class="post-tags">
+                <span class="tag">#Philosophy</span>
+                <span class="tag">#Classics</span>
+                <span class="tag">#Dostoevsky</span>
+              </div>
+
+              <div class="post-footer">
+                <div class="post-stats">
+                  <span><i class="fa-regular fa-heart"></i> 24</span>
+                  <button>
+                    <i class="fa-regular fa-message"></i> 8 Comments
+                  </button>
+                </div>
+                <button class="icon-btn">
+                  <i class="fa-solid fa-share-nodes"></i>
+                </button>
+              </div>
+            </article>
+
+            <article class="post-card">
+              <div class="post-header">
+                <img
+                  src="../assets/images/profileF.jpeg"
+                  alt="Ms. Thus Kumari"
+                  class="avatar"
+                />
+                <div class="post-author-info">
+                  <h4>Ms. Thus Kumari</h4>
+                  <p>5 hours ago &middot; Avid Reader</p>
+                </div>
+                <button class="btn-more">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </button>
+              </div>
+
+              <p class="post-text">
+                Just finished this amazing sci-fi novel. The world-building is
+                incredible, and the author's take on AI ethics kept me up all
+                night thinking. Highly recommend to anyone who loved 'Dune' or
+                'Foundation'. I have a pristine copy up for exchange if anyone
+                is interested!
+              </p>
+
+              <div class="post-book">
+                <img
+                  src="../assets/images/bookC.png"
+                  alt="The Quantum Thief cover"
+                  class="post-book-cover"
+                />
+                <div class="post-book-info">
+                  <h5>The Quantum <br />Thief</h5>
+                  <p>Hannu Rajaniemi</p>
+                  <span class="tag-exchange">Available for Exchange</span>
+                </div>
+              </div>
+
+              <div class="post-tags">
+                <span class="tag">#SciFi</span>
+                <span class="tag">#BookReview</span>
+              </div>
+
+              <div class="post-footer">
+                <div class="post-stats">
+                  <span><i class="fa-regular fa-heart"></i> 12</span>
+                  <button>
+                    <i class="fa-regular fa-message"></i> 3 Comments
+                  </button>
+                </div>
+                <button class="icon-btn">
+                  <i class="fa-solid fa-share-nodes"></i>
+                </button>
+              </div>
+            </article>
+
+            <button class="btn-load-more">Load More Discussions</button>
+          </div>
+
+          <aside class="feed-sidebar">
+            <div class="sidebar-card">
+              <h3>
+                <i class="fa-solid fa-arrow-trend-up"></i> Trending Topics
+              </h3>
+              <ul class="trending-list">
+                <li>
+                  <p class="trend-name">#StudyTips</p>
+                  <p class="trend-count">1.2k posts this week</p>
+                </li>
+                <li>
+                  <p class="trend-name">#Fiction</p>
+                  <p class="trend-count">850 posts this week</p>
+                </li>
+                <li>
+                  <p class="trend-name">#HistoricalNonFiction</p>
+                  <p class="trend-count">420 posts this week</p>
+                </li>
+                <li>
+                  <p class="trend-name">#PoetryMonth</p>
+                  <p class="trend-count">315 posts this week</p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="sidebar-card">
+              <h3><i class="fa-solid fa-award"></i> Top Contributors</h3>
+              <ul class="contributors-list">
+                <li>
+                  <img
+                    src="../assets/images/profile2.jpeg"
+                    alt="Rekha Thapa"
+                    class="avatar avatar-sm"
+                  />
+                  <div class="contributor-info">
+                    <p class="contributor-name">Rekha Thapa</p>
+                    <p class="contributor-stat">42 Books Shared</p>
+                  </div>
+                  <button class="icon-btn">
+                    <i class="fa-solid fa-user-plus"></i>
+                  </button>
+                </li>
+                <li>
+                  <img
+                    src="../assets/images/profile3.jpeg"
+                    alt="Rajesh Hamal"
+                    class="avatar avatar-sm"
+                  />
+                  <div class="contributor-info">
+                    <p class="contributor-name">Saugat Malla</p>
+                    <p class="contributor-stat">38 Books Shared</p>
+                  </div>
+                  <button class="icon-btn">
+                    <i class="fa-solid fa-user-plus"></i>
+                  </button>
+                </li>
+                <li>
+                  <img
+                    src="../assets/images/profile4.jpeg"
+                    alt="Suvashan Baniya"
+                    class="avatar avatar-sm"
+                  />
+                  <div class="contributor-info">
+                    <p class="contributor-name">Suvashan Baniya</p>
+                    <p class="contributor-stat">29 Books Shared</p>
+                  </div>
+                  <button class="icon-btn">
+                    <i class="fa-solid fa-user-plus"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </main>
     </div>
     <script src="../assets/js/main.js"></script>
   </body>
