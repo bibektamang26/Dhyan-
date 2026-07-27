@@ -22,13 +22,112 @@
     <!-- Global CSS -->
     <link rel="stylesheet" href="../assets/css/variables.css" />
     <link rel="stylesheet" href="../assets/css/components.css" />
+
+    <!-- Page css -->
+    <link rel="stylesheet" href="../assets/css/requests.css" />
   </head>
 
   <body>
-    <div class="dashboard-layout">
+    <div class="layout">
       <div id="sidebar"></div>
 
-      <main></main>
+      <main>
+        <div class="exchange-requests">
+          <header class="page-header">
+            <h1>Exchange Requests</h1>
+          </header>
+
+          <nav class="tabs">
+            <a href="#" class="tab tab-active">Received Requests</a>
+            <a href="#" class="tab">Sent Requests</a>
+          </nav>
+
+          <section class="request-cards">
+            <div class="request-card">
+              <div class="request-cover">
+                <img
+                  src="../assets/images/p5.png"
+                  alt="The Great Gatsby cover"
+                />
+              </div>
+              <div class="request-details">
+                <div class="request-top-row">
+                  <span class="status-badge status-pending">Pending</span>
+                  <span class="request-date">Oct 10, 2026</span>
+                </div>
+                <h3 class="request-title">The Great Gatsby</h3>
+                <p class="request-author">F. Scott Fitzgerald</p>
+                <hr class="divider" />
+                <div class="request-user">
+                  <img
+                    src="../assets/images/profile3.jpeg"
+                    alt="Santosh"
+                    class="avatar"
+                  />
+                  <p><strong>Santosh Gurung</strong> wants to exchange</p>
+                </div>
+                <div class="request-actions">
+                  <button class="btn-accept">Accept</button>
+                  <button class="btn-decline">Decline</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="request-card">
+              <div class="request-cover">
+                <img
+                  src="../assets/images/book4.png"
+                  alt="कर्नाली ब्लुज cover"
+                />
+              </div>
+              <div class="request-details">
+                <div class="request-top-row">
+                  <span class="status-badge status-accepted">Accepted</span>
+                  <span class="request-date">Jul 21, 2026</span>
+                </div>
+                <h3 class="request-title">कर्नाली ब्लुज</h3>
+                <p class="request-author">बुद्धिसागर</p>
+                <hr class="divider" />
+                <div class="request-user">
+                  <img
+                    src="../assets/images/profile2.jpeg"
+                    alt="Anisha"
+                    class="avatar"
+                  />
+                  <p><strong>Anisha</strong> wants to exchange</p>
+                </div>
+                <button class="btn-message">
+                  <i class="fa-regular fa-message"></i> Message
+                </button>
+              </div>
+            </div>
+
+            <div class="request-card">
+              <div class="request-cover">
+                <img src="../assets/images/p3.png" alt="Meditations cover" />
+              </div>
+              <div class="request-details">
+                <div class="request-top-row">
+                  <span class="status-badge status-completed">Completed</span>
+                  <span class="request-date">Oct 15, 2026</span>
+                </div>
+                <h3 class="request-title">Meditations</h3>
+                <p class="request-author">Marcus Aurelius</p>
+                <hr class="divider" />
+                <div class="request-user">
+                  <img
+                    src="../assets/images/profile.jpeg"
+                    alt="Bihesh"
+                    class="avatar"
+                  />
+                  <p><strong>Bihesh</strong> received this book</p>
+                </div>
+                <p class="request-note">Exchange successfully finalized.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
     </div>
     <script src="../assets/js/main.js"></script>
   </body>
