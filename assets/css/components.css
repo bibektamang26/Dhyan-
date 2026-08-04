@@ -334,8 +334,9 @@ a {
 }
 
 .sidebar .nav-item.active {
-  background: #244ea2;
-  color: #ffffff;
+  background-color: #244ea2;
+  color: white;
+  border-radius: 8px;
 }
 
 .sidebar:has(.nav-item:hover) .nav-item.active:not(:hover) {
