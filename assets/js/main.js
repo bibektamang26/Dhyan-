@@ -17,13 +17,18 @@ fetch("../components/sidebar.html")
   .then((response) => response.text())
   .then((data) => {
     document.getElementById("sidebar").innerHTML = data;
-    const currentPage =
-      window.CURRENT_PAGE ||
-      window.location.pathname.split("/").pop().replace(".html", "");
-    const navLinks = document.querySelectorAll(".nav-item");
-    navLinks.forEach((link) => {
-      if (link.getAttribute("data-page") === currentPage) {
-        link.classList.add("active");
-      }
-    });
+    highlightActiveNavItem(); // run after sidebar loads
   });
+
+// Highlight the active sidebar link
+function highlightActiveNavItem() {
+  const currentPage = window.location.pathname.split("/").pop();
+
+  document.querySelectorAll(".sidebar .nav-item").forEach((link) => {
+    const linkPage = link.getAttribute("href").split("/").pop();
+
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+    }
+  });
+}
