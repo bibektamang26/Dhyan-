@@ -33,6 +33,7 @@ function highlightActiveNavItem() {
   });
 }
 
+//requests page
 document.addEventListener("DOMContentLoaded", () => {
   const tabs = document.querySelectorAll(".tab");
   const panels = {
@@ -53,4 +54,75 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+});
+
+// Settings page
+const appearanceCards = document.querySelectorAll(".appearance-card");
+
+appearanceCards.forEach((card, index) => {
+  card.addEventListener("click", () => {
+    appearanceCards.forEach((c) =>
+      c.classList.remove("appearance-card-active"),
+    );
+    card.classList.add("appearance-card-active");
+
+    const mode = index === 0 ? "light" : index === 1 ? "dark" : "system";
+    applyTheme(mode);
+    localStorage.setItem("dhyan-theme", mode);
+  });
+});
+
+function applyTheme(mode) {
+  if (mode === "system") {
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
+    document.documentElement.setAttribute(
+      "data-theme",
+      prefersDark ? "dark" : "light",
+    );
+  } else {
+    document.documentElement.setAttribute("data-theme", mode);
+  }
+}
+
+const savedTheme = localStorage.getItem("dhyan-theme") || "light";
+applyTheme(savedTheme);
+const savedIndex = savedTheme === "light" ? 0 : savedTheme === "dark" ? 1 : 2;
+if (appearanceCards[savedIndex]) {
+  appearanceCards.forEach((c) => c.classList.remove("appearance-card-active"));
+  appearanceCards[savedIndex].classList.add("appearance-card-active");
+}
+
+const toggles = document.querySelectorAll(".toggle");
+
+toggles.forEach((toggle) => {
+  toggle.addEventListener("click", () => {
+    const isOn = toggle.classList.toggle("toggle-on");
+    toggle.setAttribute("aria-pressed", isOn ? "true" : "false");
+  });
+});
+
+// edit profile details
+const editBtn = document.getElementById("edit-profile-btn");
+const displayNameInput = document.getElementById("display-name");
+const academicBioInput = document.getElementById("academic-bio");
+const profileInputs = [displayNameInput, academicBioInput];
+
+let isEditingProfile = false;
+
+editBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  isEditingProfile = !isEditingProfile;
+
+  profileInputs.forEach((input) => {
+    input.readOnly = !isEditingProfile;
+  });
+
+  editBtn.textContent = isEditingProfile ? "Done editing" : "Edit details";
+
+  if (isEditingProfile) {
+    displayNameInput.focus();
+  }
 });
