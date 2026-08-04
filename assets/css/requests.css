@@ -184,7 +184,7 @@ main {
 }
 
 .btn-accept {
-  background-color: #244ea2;
+  background-color: #30d158;
   color: #fff;
   border: none;
   padding: 8px 16px;
@@ -195,7 +195,7 @@ main {
 }
 
 .btn-accept:hover {
-  background-color: #1d4ed8;
+  background-color: #24bb4a;
 }
 
 .btn-decline {
