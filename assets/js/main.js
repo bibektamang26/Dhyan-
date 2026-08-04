@@ -32,3 +32,25 @@ function highlightActiveNavItem() {
     }
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".tab");
+  const panels = {
+    received: document.getElementById("received-panel"),
+    sent: document.getElementById("sent-panel"),
+  };
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      tabs.forEach((t) => t.classList.remove("tab-active"));
+      tab.classList.add("tab-active");
+
+      const target = tab.dataset.tab;
+      Object.keys(panels).forEach((key) => {
+        panels[key].style.display = key === target ? "grid" : "none";
+      });
+    });
+  });
+});
