@@ -22,13 +22,164 @@
     <!-- Global CSS -->
     <link rel="stylesheet" href="../assets/css/variables.css" />
     <link rel="stylesheet" href="../assets/css/components.css" />
+
+    <!-- Page css -->
+    <link rel="stylesheet" href="../assets/css/settings.css" />
   </head>
 
   <body>
-    <div class="dashboard-layout">
+    <div class="layout">
       <div id="sidebar"></div>
 
-      <main></main>
+      <main>
+        <div class="settings">
+          <header class="page-header">
+            <h1>Settings</h1>
+            <p>Manage your account preferences and application appearance.</p>
+          </header>
+
+          <section class="settings-section">
+            <h2><i class="fa-solid fa-palette"></i> Appearance</h2>
+
+            <div class="appearance-options">
+              <button class="appearance-card appearance-card-active">
+                <div class="appearance-preview preview-light">
+                  <span class="preview-bar"></span>
+                  <span class="preview-line"></span>
+                  <span class="preview-line short"></span>
+                </div>
+                <h4>Light Mode</h4>
+                <p>Default bright interface</p>
+              </button>
+
+              <button class="appearance-card">
+                <div class="appearance-preview preview-dark">
+                  <span class="preview-bar"></span>
+                  <span class="preview-line"></span>
+                  <span class="preview-line short"></span>
+                </div>
+                <h4>Dark Mode</h4>
+                <p>Easier on the eyes</p>
+              </button>
+
+              <button class="appearance-card">
+                <div class="appearance-preview preview-system">
+                  <i class="fa-solid fa-gear"></i>
+                </div>
+                <h4>System</h4>
+                <p>Sync with OS settings</p>
+              </button>
+            </div>
+          </section>
+
+          <section class="settings-section">
+            <h2><i class="fa-solid fa-user-gear"></i> Account Settings</h2>
+
+            <div class="settings-card">
+              <div class="settings-card-header">
+                <div>
+                  <h3>Profile Information</h3>
+                  <p>Update your public identity on the Dhyan network.</p>
+                </div>
+                <a href="#" class="link-edit" id="edit-profile-btn"
+                  >Edit details</a
+                >
+              </div>
+
+              <div class="profile-fields">
+                <img
+                  src="../assets/images/profile5.png"
+                  alt="Bibek"
+                  class="profile-avatar"
+                />
+                <div class="field-group">
+                  <label for="display-name">Display Name</label>
+                  <input
+                    type="text"
+                    id="display-name"
+                    value="Bibek Tamang"
+                    readonly
+                  />
+                </div>
+                <div class="field-group">
+                  <label for="academic-bio">Academic Bio</label>
+                  <input
+                    type="text"
+                    id="academic-bio"
+                    value="CS student"
+                    readonly
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="settings-columns">
+              <div class="settings-card">
+                <h3><i class="fa-regular fa-bell"></i> Notifications</h3>
+
+                <ul class="toggle-list">
+                  <li>
+                    <span>Book Exchange Requests</span>
+                    <button
+                      class="toggle toggle-on"
+                      aria-pressed="true"
+                    ></button>
+                  </li>
+                  <li>
+                    <span>Community Forum Mentions</span>
+                    <button class="toggle" aria-pressed="false"></button>
+                  </li>
+                  <li>
+                    <span>Lending Overdue Alerts</span>
+                    <button
+                      class="toggle toggle-on"
+                      aria-pressed="true"
+                    ></button>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="settings-card">
+                <h3><i class="fa-solid fa-shield-halved"></i> Security</h3>
+
+                <ul class="settings-list">
+                  <li>
+                    <a href="#">
+                      <span
+                        ><i class="fa-solid fa-key"></i> Change Password</span
+                      >
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span
+                        ><i class="fa-solid fa-mobile-screen"></i> Two-Factor
+                        Auth</span
+                      >
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="link-danger">
+                      <span
+                        ><i class="fa-solid fa-triangle-exclamation"></i>
+                        Deactivate Account</span
+                      >
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <footer class="settings-footer">
+            <button class="btn-cancel">Cancel</button>
+            <button class="btn-save">Save Changes</button>
+          </footer>
+        </div>
+      </main>
     </div>
     <script src="../assets/js/main.js"></script>
   </body>
