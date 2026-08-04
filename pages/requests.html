@@ -36,13 +36,14 @@
           <header class="page-header">
             <h1>Exchange Requests</h1>
           </header>
-
           <nav class="tabs">
-            <a href="#" class="tab tab-active">Received Requests</a>
-            <a href="#" class="tab">Sent Requests</a>
+            <a href="#" class="tab tab-active" data-tab="received"
+              >Received Requests</a
+            >
+            <a href="#" class="tab" data-tab="sent">Sent Requests</a>
           </nav>
 
-          <section class="request-cards">
+          <section class="request-cards" id="received-panel">
             <div class="request-card">
               <div class="request-cover">
                 <img
@@ -125,6 +126,33 @@
                 <p class="request-note">Exchange successfully finalized.</p>
               </div>
             </div>
+          </section>
+
+          <section class="request-cards" id="sent-panel" style="display: none">
+            <div class="request-card">
+              <div class="request-cover">
+                <img src="../assets/images/p1.png" alt="Some Book cover" />
+              </div>
+              <div class="request-details">
+                <div class="request-top-row">
+                  <span class="status-badge status-pending">Pending</span>
+                  <span class="request-date">Aug 1, 2026</span>
+                </div>
+                <h3 class="request-title">Some Book Title</h3>
+                <p class="request-author">Some Author</p>
+                <hr class="divider" />
+                <div class="request-user">
+                  <img
+                    src="../assets/images/profile4.jpeg"
+                    alt="User"
+                    class="avatar"
+                  />
+                  <p>You requested from <strong>Someone</strong></p>
+                </div>
+                <button class="btn-decline">Cancel Request</button>
+              </div>
+            </div>
+            <!-- more sent request cards -->
           </section>
         </div>
       </main>
