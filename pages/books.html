@@ -67,15 +67,26 @@
 
           <div class="filter-bar">
             <div class="filter-group">
-              <button class="filter-dropdown">
-                All Categories <i class="fa-solid fa-chevron-down"></i>
-              </button>
-              <button class="filter-dropdown">
-                Availability <i class="fa-solid fa-chevron-down"></i>
-              </button>
-              <button class="filter-dropdown">
-                Distance <i class="fa-solid fa-chevron-down"></i>
-              </button>
+              <select class="filter-dropdown">
+                <option value="all">All Categories</option>
+                <option value="self-help">Self-Help</option>
+                <option value="fiction">Fiction</option>
+                <option value="memoir">Memoir</option>
+                <option value="sci-fi">Science Fiction</option>
+              </select>
+
+              <select class="filter-dropdown">
+                <option value="all">Availability</option>
+                <option value="available">Available</option>
+                <option value="exchanged">Exchanged</option>
+              </select>
+
+              <select class="filter-dropdown">
+                <option value="any">Distance</option>
+                <option value="1">Under 1 mi</option>
+                <option value="5">Under 5 mi</option>
+                <option value="10">Under 10 mi</option>
+              </select>
             </div>
             <button class="more-filters">
               <i class="fa-solid fa-sliders"></i> More Filters
